@@ -28,6 +28,10 @@ int main(){
      {grid(arr,re);
      printf("***player %d won***",p);
         break;}
+         if((arr[0]==arr[3]&&arr[3]==arr[6])||(arr[1]==arr[4]&&arr[4]==arr[7])||(arr[2]==arr[5]&&arr[5]==arr[8]))
+     {grid(arr,re);
+     printf("***player %d won***",p);
+        break;}
         else if(flag==9){
             grid(arr,re);
      printf("***game tie***\n");
