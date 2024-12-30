@@ -44,16 +44,28 @@ int main(){
    
     return 0;
 }
+
 void grid(char arr[9],int re){
     system("cls");
-    
+
     printf("|     |     |     |\n");
-    printf("|  %c  |  %c  |  %c  |\n",arr[0],arr[1],arr[2]);
+    printf("|  %s%c%s  |  %s%c%s  |  %s%c%s  |\n",
+           (arr[0] == '0') ? RED : (arr[0] == 'X') ? BLUE : "", arr[0], RESET,
+           (arr[1] == '0') ? RED : (arr[1] == 'X') ? BLUE : "", arr[1], RESET,
+           (arr[2] == '0') ? RED : (arr[2] == 'X') ? BLUE : "", arr[2], RESET);
     printf("|-----|-----|-----|\n");
     printf("|     |     |     |\n");
-    printf("|  %c  |  %c  |  %c  |\n",arr[3],arr[4],arr[5]);
+    printf("|  %s%c%s  |  %s%c%s  |  %s%c%s  |\n",
+           (arr[3] == '0') ? RED : (arr[3] == 'X') ? BLUE : "", arr[3], RESET,
+           (arr[4] == '0') ? RED : (arr[4] == 'X') ? BLUE : "", arr[4], RESET,
+           (arr[5] == '0') ? RED : (arr[5] == 'X') ? BLUE : "", arr[5], RESET);
     printf("|-----|-----|-----|\n");
     printf("|     |     |     |\n");
-    printf("|  %c  |  %c  |  %c  |\n",arr[6],arr[7],arr[8]);
-    if(re==1)printf("retry!!!\n");
+    printf("|  %s%c%s  |  %s%c%s  |  %s%c%s  |\n",
+           (arr[6] == '0') ? RED : (arr[6] == 'X') ? BLUE : "", arr[6], RESET,
+           (arr[7] == '0') ? RED : (arr[7] == 'X') ? BLUE : "", arr[7], RESET,
+           (arr[8] == '0') ? RED : (arr[8] == 'X') ? BLUE : "", arr[8], RESET);
+    printf("|     |     |     |\n");
+
+    if(re==1) printf(" %sRetry!!!%s\n",RED,RESET);
 }
